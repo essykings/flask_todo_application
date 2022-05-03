@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% block content%}
+<section class="container">
+   <div class="row">
+      <div class="col">
+         <form action="" method="post" novalidate>
+            <p>
+               {{ form.email.label }}<br>
+               {{ form.email(size =32) }}
+            </p>
+            <p>
+               {{ form.password.label }}<br>
+               {{ form.password(size=32) }}
+            </p>
+            <p>{{ form.submit() }}</p>
+         </form>
+      </div>
+   </div>
+</section>
+{% endblock %}

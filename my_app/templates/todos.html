@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block content%}
+<section class="container">
+   <a href={{ url_for('tasks.add_tasks') }}>
+   <button class="add_button ">Add New Task</button>
+   </a>
+   <div class="row">
+      <div class="col" >
+         {% for todo in todos %}
+         <ul id =round>
+            <li>{{todo.task_name}}</li>
+            <br>
+            <li>{{todo.due_date.strftime('%A,%d,%b,%Y')}}</li>
+            <br>
+            <li>Status: {{todo.status}}</li>
+            <br>
+         </ul>
+         {% endfor %}
+      </div>
+   </div>
+</section>
+{% endblock %}
+<!-- <li><a href = "{{ url_for('post', id=todo['id']) }}">{{todo.task_name}}</a></p> -->

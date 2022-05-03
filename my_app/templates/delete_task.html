@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block content%}
+<section class="container">
+   <div class="row">
+      <div class="col">
+         <p>{{task_name}}</p>
+         <form action='' method="post">
+            Are you sure you want to delete this Task
+            <input type = "submit" value="Delete">
+            <a href='/todos'>Go Back</a>
+         </form>
+      </div>
+   </div>
+</section>
+{% endblock%}
